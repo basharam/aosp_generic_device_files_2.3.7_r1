@@ -49,7 +49,7 @@ USE_CAMERA_STUB := true
 TARGET_SHELL := mksh
 
 # CPU
-#TARGET_ARCH_VARIANT := armv7-a-neon // issues on GB, and slow neon emulation
+#TARGET_ARCH_VARIANT := armv7-a-neon // seem slow  emulation with neon, never tested though.
 #ARCH_ARM_HAVE_TLS_REGISTER := true
 
 5. finally create vendorsetup.sh and add below line
@@ -83,3 +83,21 @@ $out/host/linux-x86/bin/emulator -sysdir out/target/product/basha/ -system out/t
 
 
 10. on emulator click menu->settigs->about phone-> "verify build date and version"
+
+
+
+Note:
+1. To Add generic system properties such as 3G, RIL... 
+myaosp/android$ cp  build/target/board/generic/system.prop device/basharam/basha/.
+
+2. To start emulator with custom built kernel
+myaosp/android$ out/host/linux-x86/bin/emulator -kernel kernel/arch/arm/boot/zImage&
+
+3. To build generic device for Intel-atom
+
+add inside BoardConfig.mk
+
+TARGET_ARCH_VARIANT := x86-atom
+TARGET_ARCH_ := x86
+TARGET_CPU_ABI := x86
+
