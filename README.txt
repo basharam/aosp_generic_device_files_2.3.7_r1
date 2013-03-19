@@ -69,11 +69,8 @@ Lunch menu... pick a combo:
      4. full_passion-userdebug
      5. htc_vision-userdebug
      6. htc_vision-eng
-     7. full_marakana_alpha-eng
-     8. full_marakana_alpha-userdebug
-     9. full_marakana_alpha-user
-     10. full_crespo4g-userdebug
-     11. full_crespo-userdebug
+     7. full_crespo4g-userdebug
+     8. full_crespo-userdebug
      
 8. make -j2
 
